@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KasirID</title>
+  <link rel="icon" href="./images/icon.jpeg" style="border-radius: 50%;" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">BayarDisini</div>
+      <ul class="nav-links">
+        <li>
+          <a href="history.html"> 
+          <i class="fa-solid fa-receipt"></i></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="cashier-system">
+    <h1>Cashier System</h1>
+
+    <!-- Input Harga Barang -->
+    <div class="form-group">
+      <label for="item-price">Enter Item Price:</label>
+      <input type="number" id="item-price" minlength="100" placeholder="Enter price" />
+      <button onclick="addItem()">
+        ADD <i class="fa-solid fa-plus"></i>
+      </button>
+    </div>
+
+    <!-- Input Pembayaran -->
+    <div class="form-group">
+      <label for="payment">Enter Payment Amount:</label>
+      <input type="number" id="payment" placeholder="Enter payment" />
+    </div>
+
+    <!-- Hasil -->
+    <div class="results">
+      <p>Total Price: <span id="total-price">Rp 0</span></p>
+      <p>Change: <span id="change">Rp 0</span></p>
+    </div>
+
+    <!-- Pilihan Metode Pembayaran -->
+    <div class="payment-methods">
+      <h5>Select Payment Method</h5>
+      <div class="payment-options">
+        <label>
+          <input type="radio" name="payment-method" value="CASH" checked />
+          <img src="images/cash.jpg" alt="Cash" class="payment-logo" />
+        </label>
+        <label>
+          <input type="radio" name="payment-method" value="DANA" />
+          <img src="images/dana.jpg" alt="Dana" class="payment-logo" />
+        </label>
+        <label>
+          <input type="radio" name="payment-method" value="GOPAY" />
+          <img src="images/gopay.png" alt="Gopay" class="payment-logo" />
+        </label>
+        <label>
+          <input type="radio" name="payment-method" value="QRIS" />
+          <img src="images/qris.jpg" alt="QRIS" class="payment-logo" />
+        </label>
+      </div>
+    </div>
+
+    <!-- Daftar Barang -->
+    <div class="item-list">
+      <h2>Item :</h2>
+      <ul id="item-list"></ul>
+    </div>
+
+    <!-- Tombol Aksi -->
+    <div class="buttons">
+      <button onclick="clearAll()">Clear Items</button>
+      <button onclick="completeTransaction()">Bayar</button>
+    </div>
+  </main>
+
+  <!-- Modal Informasi Pembayaran -->
+  <div class="modal" id="payment-info-modal">
+    <div class="modal-content">
+      <h2 id="payment-method-title"></h2>
+      <div id="payment-description"></div>
+      <button onclick="closePaymentModal()">Done</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Simple Cashier Website. All rights reserved by @Hans.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

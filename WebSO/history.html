@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transaction History</title>
+  <link rel="icon" href="./images/icon.jpeg" style="border-radius: 50%;" type="image/x-icon">
+  <link rel="stylesheet" href="history.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">BayarDisini</div>
+      <ul class="nav-links">
+        <li>
+          <button id="search-button">
+            <i class="fa-solid fa-magnifying-glass"></i></button>
+        </li>
+        <li>
+          <button id="download-button">
+            <i class="fa-solid fa-download"></i>
+          </button>
+        </li>
+        <li>
+          <a href="index.html">
+            <i class="fa-solid fa-home"></i></a>
+          </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Riwayat Transaksi</h1>
+    <div class="table-container">
+      <table id="transaction-history">
+        <thead>
+          <tr>
+            <th>Invoice ID</th>
+            <th>Jumlah Barang</th>
+            <th>Total Harga</th>
+            <th>Tanggal</th>
+            <th>Metode Pembayaran</th>
+            <th>Salin ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Data akan diisi oleh JavaScript -->
+        </tbody>
+      </table>
+    </div>
+
+<!-- Modal Tracking Transaksi -->
+<div class="modal" id="tracking-modal">
+  <div class="modal-content">
+    <h3>Lacak Transaksi</h3>
+    <input type="text" id="tracking-input" placeholder="Masukkan Invoice ID" />
+    <button onclick="trackTransaction()"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <p id="tracking-status"></p>
+
+  </div>
+  <div class="closepop">
+  <button onclick="closeTrackingModal()"><i class="fa-solid fa-chevron-up"></i></button>
+</div>
+</div>
+
+<!-- Modal Unduhan -->
+<div class="modal" id="download-modal">
+  <div class="modal-contents">
+    <h2>Unduh Riwayat Transaksi</h2>
+    <form id="download-form">
+      <!-- Pilihan Format File -->
+      <fieldset>
+        <legend>Pilih Format File</legend>
+        <label>
+          <input type="radio" name="file-format" value="pdf" checked />
+          PDF
+        </label>
+        <label>
+          <input type="radio" name="file-format" value="excel" />
+          Excel
+        </label>
+      </fieldset>
+
+      <!-- Pilihan Tindakan -->
+      <fieldset>
+        <legend>Pilih Tindakan Setelah Unduhan</legend>
+        <label>
+          <input type="radio" name="post-action" value="clear" />
+          Download dan Bersihkan Transaksi
+        </label>
+        <label>
+          <input type="radio" name="post-action" value="keep" checked />
+          Download dan Pertahankan Riwayat Transaksi
+        </label>
+      </fieldset>
+    </form>
+    <button onclick="handleDownload()">Unduh</button>
+    <button onclick="closeDownloadModal()">Batal</button>
+  </div>
+</div>
+
+  </main>
+
+  
+
+  <footer>
+    <p>&copy; 2024 Simple Cashier Website. All rights reserved by @Hans.</p>
+  </footer>
+
+  <script src="history.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+</body>
+</html>

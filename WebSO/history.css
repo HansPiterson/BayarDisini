@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+/* Reset */
+* {
+  margin: 0;
+  /* border: 2px solid red; */
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #121212; /* Soft black */
+  color: #ffffff; /* White text */
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent */
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.258);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  max-width: 450px;
+  z-index: 1000;
+}
+
+.modal-content {
+  text-align: center;
+  width: 100%;
+}
+
+.modal-content input {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px 6px;
+  /* margin: 5px 0; */
+  background: none;
+  color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px 0px 0px 6px;
+}
+
+h3 {
+  font-weight: 400;
+  display: flex;
+}
+
+.closepop button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: 300;
+  top: 45px;
+  /* margin-bottom: 20px; */
+  right: 0;
+  /* display: flex; */
+  position: absolute;
+  background-color: #090a0a;
+  color: white;
+  border: none;
+  border-radius: 1px 10px 10px 1px;
+  cursor: pointer;
+  margin-top: 5px;
+  justify-content: end;
+}
+
+#tracking-status {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+
+
+
+
+#tracking-status {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0.1rem;
+  
+}
+
+/* home */
+.nav-links a {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 650;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-links button {
+    font-size: 20px;
+    position: relative;
+    display: flex;
+    bottom: 5px;
+    margin: 5px;
+    right: 20px;
+    /* margin-right: 20px; */
+    /* margin-left: 10px; */
+    font-weight: 650;
+    background: none;
+    color: white;
+    cursor: pointer;
+    border: none;
+    /* border-radius: 4px; */
+  
+}
+
+
+main {
+  margin: 60px 0;
+}
+
+
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+.table-container {
+  overflow-x: auto;
+  margin: 0;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #0000;
+}
+
+thead {
+  background-color: #343a40;
+  color: white;
+}
+
+thead th {
+  padding: 10px;
+  font-size: 12px;
+  text-align: start;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #0a0707;
+}
+
+tbody td {
+  padding: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+
+button.copy-button {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button.copy-button:hover {
+  background-color: #b300008e;
+}
+
+/* download */
+
+
+.modal-contents {
+  text-align: center;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  margin: 15px 0;
+  padding: 10px;
+  text-align: left;
+}
+
+legend {
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin: 5px 0;
+}
+
+.modal-contents button {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-content {
+    text-align: center;
+    width: 100%;
+  }
+
+  tbody td {
+    padding: 14px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  thead th {
+    font-size: 9px;
+    text-align: center;
+  }
+
+  .table-container {
+    overflow-x: auto;
+    /* margin: 0 0; */
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #0000;
+  }
+}

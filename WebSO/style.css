@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #121212; /* Soft black */
+  color: #ffffff; /* White text */
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent */
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  /* font-size: 1rem; */
+  font-size: 20px;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 650;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f7f9f9; /* Accent color */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(10, 4, 4, 0.975);
+  margin-top: auto;
+}
+
+footer p {
+  font-size: 0.6rem;
+}
+
+.cashier-system {
+  margin-top: 4rem;
+  background-color: #1e1e1e;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* left: 40%; */
+ 
+
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 420px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h5 {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: start;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  width: calc(100% - 5px);
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  background:none;
+  border: 1px solid #ffffff4f;
+  border-radius: 4px;
+  color: white;
+}
+
+
+
+button span {
+  font-size: 14px;
+  font-style: bold;
+}
+
+button {
+  background-color: #100802;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  display: block;
+  width: calc(100% - 5px);
+  max-width: 400px;
+}
+
+button:hover {
+  border: 1px solid #ffffff52;
+  background-color: #0000005a;
+}
+
+.results p {
+  margin: 0.5rem 0;
+}
+
+#total-price, #change {
+  font-weight: bold;
+}
+
+.item-list {
+  margin-top: 1rem;
+}
+
+.item-list h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.item-list ul {
+  list-style: none;
+  padding: 1;
+}
+
+.item-list li {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2d2d2d;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 12px;
+}
+
+.item-list button {
+  color: white;
+  border-radius: 50px;
+background: #d32f2f;
+  border: none;
+  /* border-radius: 50%; */
+  /* padding: 0.5rem; */
+  width: 35px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.buttone button {
+  background-color: #121212;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.item-list button:hover {
+  background-color: #b71c1c;
+}
+
+.buttons {
+  margin-top: 1rem;
+}
+
+.buttons button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: #9a8b05;
+}
+
+p {
+  font-size: 14px;
+}
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal-content img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 10px 60px rgb(218, 229, 255);
+  border: 1px solid rgb(159, 159, 160);
+  margin: 10px 0;
+}
+
+.modal-content button {
+  background-color: #1c4cc8;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.modal-content .close {
+  background-color: #15100b;
+}
+
+.modal-content i {
+  color: #00bcd4;
+}
+
+.modal-content button:hover {
+  background-color: #065580a3;
+}
+
+/* Payment Methods */
+.payment-methods {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.payment-options {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.payment-options label {
+  position: relative;
+  cursor: pointer;
+}
+
+.payment-options input[type="radio"] {
+  display: none; /* Sembunyikan radio button default */
+}
+
+.payment-logo {
+  width: 65px;
+  height: 60px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.payment-options input[type="radio"]:checked + .payment-logo {
+  border-color: #008dd4ea;
+  transform: scale(1.2);
+}
+
+.payment-logo:hover {
+  transform: scale(1.1);
+  border-color: #ccc;
+}
+
+
+.form {
+  background-color: #fff;
+  box-shadow: 0 10px 60px rgb(218, 229, 255);
+  border: 1px solid rgb(159, 159, 160);
+  border-radius: 20px;
+  padding: 2rem .6rem .6rem .6rem;
+  text-align: center;
+  font-size: 1.125rem;
+  max-width: 350px;
+}
+
+.form-title {
+  color: #000000;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.form-paragraph {
+  margin-top: 10px;
+  font-size: 0.9375rem;
+  color: rgb(105, 105, 105);
+}
+
+.drop-container {
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: 2.1875rem;
+  border-radius: 10px;
+  border: 2px dashed rgb(171, 202, 255);
+  color: #444;
+  cursor: pointer;
+  transition: background .2s ease-in-out, border .2s ease-in-out;
+}
+
+.drop-container:hover {
+  background: rgba(0, 140, 255, 0.164);
+  border-color: rgba(17, 17, 17, 0.616);
+}
+
+.drop-container:hover .drop-title {
+  color: #222;
+}
+
+.drop-title {
+  color: #444;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  transition: color .2s ease-in-out;
+}
+
+#file-input {
+  width: 350px;
+  max-width: 100%;
+  color: #444;
+  padding: 2px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid rgba(8, 8, 8, 0.288);
+}
+
+#file-input::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #084cdf;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}
+
+#file-input::file-selector-button:hover {
+  background: #0d45a5;
+}
+
+/* Halaman Riwayat Transaksi */
+.history-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 80px auto;
+  text-align: left;
+}
+
+.history-container h1 {
+  text-align: center;
+  color: #6200ea;
+  margin-bottom: 20px;
+}
+
+.transaction-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-card p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: flex; /* Hide nav links */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .products-container {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .products-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+  }
+}
